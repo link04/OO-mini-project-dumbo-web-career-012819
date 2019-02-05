@@ -28,17 +28,15 @@ recipe_ingredient1 = RecipeIngredient.new(ingredient4, recipe4)
 recipe_ingredient2 = RecipeIngredient.new(ingredient1, recipe3)
 recipe_ingredient3 = RecipeIngredient.new(ingredient5, recipe1)
 recipe_ingredient4 = RecipeIngredient.new(ingredient2, recipe2)
-recipe_ingredient5 = RecipeIngredient.new(ingredient3, recipe3)
-recipe_ingredient6 = RecipeIngredient.new(ingredient1, recipe3)
 
 allergen1 = Allergen.new(ingredient4, user1)
 allergen2 = Allergen.new(ingredient1, user3)
 allergen3 = Allergen.new(ingredient4, user4)
-allergen4 = Allergen.new(ingredient2, user3)
-allergen5 = Allergen.new(ingredient3, user1)
-allergen6 = Allergen.new(ingredient1, user1)
+allergen4 = Allergen.new(ingredient5, user4)
+#
+# mmgvs = [ingredient4,ingredient1]
+# recipe3.add_ingredients(mmgvs)
 
-
-
+#user1.add_recipe_card("03/01",10,recipe1 )
 
 binding.pry
