@@ -40,7 +40,11 @@ class User
       -recipe.rating
     end.first(3)
   end
-
+   
+  def most_recent_recipe
+    self.recipes.pop
+  end
+  
   def safe_recipes
     RecipeIngredient.all.select do |recipe_ingredient|
       !self.allergens.include?(recipe_ingredient.ingredient)
