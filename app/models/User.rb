@@ -35,6 +35,10 @@ class User
     Allergen.new(ingredient,self)
   end
 
+  def most_recent_recipe
+    self.recipes.pop
+  end
+
   def top_three_recipes
     self.complete_recipes.sort_by do |recipe|
       -recipe.rating
@@ -44,7 +48,7 @@ class User
   def safe_recipes
     RecipeIngredient.all.select do |recipe_ingredient|
       !self.allergens.include?(recipe_ingredient.ingredient)
-    end.map {|recipe|recipe.recipe}
+    end.map {|safe_recipe|safe_recipe.recipe}
   end
 
 end
